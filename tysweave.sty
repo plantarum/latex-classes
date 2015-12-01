@@ -1,0 +1,35 @@
+\ProvidesPackage{tysweave}
+
+\usepackage{tgschola}             % favourite font
+\usepackage[T1]{fontenc}          % required with font packages
+\usepackage[section]{placeins}    % keep figures in the section where
+                                  % they're referenced
+\usepackage[scaled=0.9]{DejaVuSansMono}           % DejaVuSans font for code
+\usepackage{natbib}               % reference style
+\bibpunct{(} {)} {;} {a} {} {,}   % citation formatting
+
+\usepackage[margin=1in]{geometry} % document size
+\usepackage[colorlinks=true,urlcolor=blue,citecolor=black]{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\def\Rcolor{\color{black}}
+\def\Routcolor{\color{black}}
+\def\Rcommentcolor{\color{BrickRed}}
+\def\Routbackground{\color{white}}
+\def\Rbackground{\color[gray]{0.95}}
+\def\Sweavesize{\normalsize}
+
+\lstdefinestyle{Rstyle}{fancyvrb=false,escapechar=`,language=R,%
+                        basicstyle={\Rcolor\Sweavesize\ttfamily},% some want \ttfamily too
+                        backgroundcolor=\Rbackground,%
+                        showstringspaces=false,%
+                        keywordstyle=\color{blue},%
+                        commentstyle={\Rcommentcolor\ttfamily},%
+                        alsoother={$},%
+                        alsoletter={.<-},%
+                        otherkeywords={!,!=,~,$,*,\&,\%/\%,\%*\%,\%\%,<-,<<-,/},%
+                        escapeinside={(*}{*)},
+                        frame=single,framerule=0.2pt,framesep=3pt}%
+

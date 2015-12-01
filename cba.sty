@@ -1,0 +1,68 @@
+\ProvidesPackage{cba}
+
+\usepackage{graphicx} % Required for including images
+\usepackage{microtype} % Improved typography
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage{booktabs} % Required for nice horizontal rules in tables
+\usepackage{wrapfig} % Required for in-line images
+\usepackage{float} % Required for forcing figures not to float with the [H] parameter
+\usepackage[margin=1in]{geometry}
+\usepackage{hanging}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[font={footnotesize},labelfont={bf},skip=7pt]{caption}
+\usepackage{titlesec}
+% \usepackage{perpage} %the perpage package
+% \MakePerPage{footnote} %the perpage package command
+\usepackage{lettrine}
+\usepackage[perpage,hang]{footmisc}
+\renewcommand{\footnotemargin}{0pt}
+
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+
+\newcommand{\featureAuthor}[1]{ % Define the \heading command
+\vspace{2pt} % White space above the heading
+{\begin{center}\Large{#1}\end{center}} % The heading style
+\vspace{2pt} % White space below the heading
+}
+
+\usepackage[absolute]{textpos}  % for title page banner
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\fancyfoot[LO,RE]{CBA/ABC Bulletin}
+\fancyfoot[RO,LE]{\thepage}
+%\fancyhead[CO,CE]{---Draft---}
+\fancyfoot[C]{48(3)}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\setcounter{page}{77}
+
+\titleformat{\section}[display]
+  {\normalfont\Huge\bfseries\scshape\centering}{\thesection}{20pt}{}
+
+%% {Left}{ Before}{ After}[ Right]
+\titlespacing*\section{0 pt}{0 pt}{0 pt}
+\titlespacing*\subsection{0 pt}{8 pt plus 4 pt minus 2 pt}{0 pt}
+\titlespacing*\subsubsection{0 pt}{4 pt plus 2 pt minus 2 pt}{0 pt}
+\titlespacing*\paragraph{0 pt}{2 pt plus 2 pt minus 2 pt}{0 pt}
+
+\renewcommand{\abstractname}{\vspace{-2\baselineskip}}
+
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato} %% Alternatively
+%% use the option 'defaultsans' instead of 'default' to replace the
+%% sans serif font only.
+
+\usepackage[dvipsnames,svgnames]{xcolor} % Required to specify custom colors
+
+%\definecolor{altncolor}{rgb}{.8,0,0} % Dark red
+\definecolor{altncolor}{rgb}{.2,.4,.8} % Dark blue
+%\definecolor{altncolor}{rgb}{.84,.16,.16} % Red
+
+\usepackage[colorlinks=true, linkcolor=altncolor, anchorcolor=altncolor,
+citecolor=altncolor, filecolor=altncolor, menucolor=altncolor,
+urlcolor=altncolor]{hyperref} % Use the color defined above for all links 
